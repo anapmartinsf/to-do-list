@@ -1,0 +1,149 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #FFEBCD;
+  background-image: url(./img/laptop-coffee-cup-notepad-black-background-top-view.jpg);
+  background-size: cover;
+}
+
+.main {
+  display: flex;
+  gap: 7rem;
+  margin-top: 7rem;
+  justify-content: center;
+}
+
+#container {
+  background-color: #fff;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 0px 13px -6px rgba(79,47,79);
+  -moz-box-shadow: 0px 0px 13px -6px rgba(79,47,79);
+  box-shadow: 0px 0px 13px -6px rgba(79,47,79);
+  padding: 2rem;
+  min-width: 40rem;
+  margin-top: 2rem;
+}
+
+header {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.hide {
+  display: none;
+}
+
+#todo-form, #edit-form {
+  border-bottom: 1px solid #ccc;
+  padding: 1.3rem 0;
+  flex-direction: column;
+}
+
+p {
+  padding-bottom: .2rem;
+  font-weight: bold;
+}
+
+#edit-cancel {
+  width: 6rem;
+  margin-top: .5rem;
+}
+
+input {
+  outline: none;
+  padding:.5rem;
+  border: 2px solid rgba(79,47,79);
+}
+
+#toolbar {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 1.3rem 0;
+  gap: 1rem;
+}
+
+form, .form-control {
+  display: flex;
+  gap: .2rem;
+}
+
+button {
+  padding: .6rem;
+  transition: .4s;
+  border: 2px solid rgba(79,47,79);
+  background-color:#e5786b;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+button i {
+
+  pointer-events: none; 
+}
+
+#filter {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ccc;
+  padding-left: 1rem;
+  flex: 1;
+}
+
+select {
+  padding:.5rem;
+  border: 2px solid rgba(79,47,79);
+}
+
+.todo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  transition: .3s;
+  gap: .5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.todo h3 {
+  flex: 1;
+}
+
+.done {
+  background-color: #FFEBCD;
+}
+
+.done h3 {
+  text-decoration: line-through;
+}
+
+@media (max-width: 450px) {
+
+  #container {
+    min-width: 10rem;
+  }
+
+  #toolbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #filter {
+    border-left: none;
+    padding-left: 0;
+    width: 10rem;
+  }
+
+  h3 {
+  word-break: break-all; 
+  }
+}
